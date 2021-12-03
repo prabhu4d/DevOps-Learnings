@@ -30,6 +30,12 @@
   - store all the content of "ls -la" into file.txt
 - ls -d \*/
   - only list directory
+- "file permissions"
+  - {file or dir}{user permission}-{group-permission}-{permission}
+  - r read
+  - w write
+  - x executable
+- ls -ld dirname
 - man ls
   - help ls
 
@@ -90,3 +96,120 @@
   - only delete all folder if its don't have files
 - rm -r a
   - recursive delete with files also
+
+### cp
+
+- cp [options] source destination
+- cp file1.txt file2.txt
+- cp file1.txt folder
+- cp -i file1.txt file2.txt folder
+  - i for interactivate mode
+  - it avoids overriding
+- cp ../file1.txt ../file2.txt .
+  - copy parents files to current directory
+  - cp -R dir1 dir3
+    - if dir3 not exist, it create dir3 and copies dir1 content into dir3
+    - if dir3 already exist, dir1 copied to dir3
+
+### mv
+
+- mv [options] source destination
+- mv f1.txt f2.txt
+- mv f2.txt dir/
+- mv f1.txr dir/f1.txt
+  - it overrides the content
+- mv dir1 dir2
+  - moves dir1 to dir2
+- mv dir2 dir3
+  - if dir3 not exist, it creates one and moves the content of dir2 in dir3
+
+### less
+
+- showing content for current terminal size
+- / searching from top
+- ? searching from bottom
+- :g goto top
+- :G goto bottom
+- :n for next occurence
+
+### touch
+
+- touch file.txt
+- touch file.txt
+  - if file.txt already exist it updates the timestamp of the file
+
+### nano
+
+### sudo
+
+- sudo -s
+  - superuser mode
+
+### top
+
+- resource monitoring
+- s [sec] - change refresh time in secs
+- i - for toggling and showing ideal process
+- k [pid] - kill the process
+
+### ps
+
+- ps -ux
+  - print current user running process
+- ps -aux
+  - print all running process
+- ps -U prabhu
+  - print prabhu user process
+- ps -C process_name
+  - show instance of process
+
+### kill
+
+- kill -flags pid
+- pidof vlc
+  - it gives pid of vlc
+- kill -KILL pid or kill -9 pid
+  - force kill
+
+### echo
+
+- echo prabhu
+- to assign a variable
+  - name="value"
+- echo $name
+- echo "some \text"
+  - some ext
+- echo '\033[0;32m' I am Groot
+
+### chmod
+
+- chmod o+x file.exe
+  - o others + do x executable permission for file.exe
+- chmod g+x file.exe
+  - g group
+- chmod g-rw file.exe
+  - removing read write permission for group
+- chmod ug=rwx file.txt
+  - user and group have permission for rwx
+- chmod a-rwx
+  - for all not permission for rwx
+- chmod 777 file.txt
+  - octal representation of permission
+
+
+### which and whatis
+- which shows the location
+- whatis show short description
+
+### useradd
+- sudo useradd name -m -s /bin/bash -g users -c "comments"
+- sudo passwd name
+- sudo userdel name
+- sudo userdel -r name
+  - to del home dir also
+- groups
+- cat etc/groups
+- sudo groupadd name
+- sudo groupdel name
+- sudo gpasswd -a username groupname
+- sudo gpasswd -d username groupname
