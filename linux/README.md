@@ -196,12 +196,13 @@
 - chmod 777 file.txt
   - octal representation of permission
 
-
 ### which and whatis
+
 - which shows the location
 - whatis show short description
 
 ### useradd
+
 - sudo useradd name -m -s /bin/bash -g users -c "comments"
 - sudo passwd name
 - sudo userdel name
@@ -213,3 +214,116 @@
 - sudo groupdel name
 - sudo gpasswd -a username groupname
 - sudo gpasswd -d username groupname
+
+### df
+
+- disk used details
+- df
+- df -h
+- du -h
+- du -sh
+- free -m for mega byte
+- free -g for giga
+
+### watch
+
+- executing command at regular interval
+- watch command
+- watch -n 1 command
+
+### head and tail
+
+- head - to show top of content
+- tail - to show bottom of content
+- head log.log - 10 lines
+- head -n3 log.log - 3 lines
+- tail -f file.log
+  - f for follow, it updates last 10 lines
+
+### find
+
+- find dirname -name filename.txt
+- find dirname -name filename.\*
+- find dirname -name \*.txt
+- find dirname -mtime -2
+  - it shows files created 2 days ago
+
+### wc
+
+- word count, no of files or count the number of characters
+- wc file.txt
+- wc -c file.txt
+- wc -w file.txt
+- wc -l file.txt
+- wc -L file.txt
+
+### cal & date
+
+- cal
+- date
+
+### running multiple commands
+
+- ls ; pwd
+- date; cal; pwd
+- date && cal && pwd
+- data || cal
+
+### apt
+
+- advanced packaging tool
+- cat /etc/apt/source.list
+- sudo apt-get autoremove
+
+### ifconfig
+
+- ifconfig
+
+### tar
+
+- tar -cvf filename filename.tar
+  c: compress, v: verbos, f: filename
+- tar -xvf filename.tar
+  x: extract
+- tar -czvf filename.tar filename.tar.gz
+- tar -xzvf filename.tar.gz
+
+### grep
+
+- global regular expression print
+- grep "text" filename
+- grep -i "text" filename
+  - case insensitive
+- grep -n "text" filename
+  - with line number
+- grep -n "text" file1 file2 file3
+- grep -n "text" \*
+  - all files in this directory
+- grep -v "text" filename
+  - show the lines except "text"
+
+### netstat
+
+- netstat
+- netstat -a
+- netstat -a | less
+- netstat -at
+  - show tcp connections
+- netstat -au
+  - show udp connections
+- netstat -l
+  - show listening ports
+- netstat -lt
+  - show listening tcp connections
+- netstat -lu
+  - show listening udp connections
+- netstat -s
+- netstat -p
+  - show pid
+- netstat -n
+  - show numeric ports
+- netstat -c
+  - continous status
+- netstat -ie
+  - is similar to ifconfig
+- netstat -an | grep ':80'
