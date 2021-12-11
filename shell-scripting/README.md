@@ -10,3 +10,7 @@
 
 - bash -x script.sh
   - for debug mode
+
+## cheatsheet
+
+- [devhint](https://devhints.io/bash)
